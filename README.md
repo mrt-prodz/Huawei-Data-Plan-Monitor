@@ -3,7 +3,9 @@
 ####System tray icon showing your current data plan usage with NASM/GoLink
 
 Display a system tray icon and report available traffic from your dataplan by making API queries to your Huawei modem.
-Setup your data plan inside your Huawei web administration panel: http://[your modem ip]/html/statistic.html
+
+Setup your data plan inside your Huawei web administration panel:
+http://[your modem ip]/html/statistic.html
 
 The program will fetch the month current download and upload statistics along with the monthly data plan and display the usage percentage on the icon.
 
