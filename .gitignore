@@ -1,0 +1,7 @@
+_backup
+_backup/*.*
+_scrot
+_scrot/*.*
+*.obj
+*.exe
+*.bat
