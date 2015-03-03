@@ -17,8 +17,12 @@
 ; The value will be refreshed every 5 minutes.
 ;
 ; nasm -f win32 datamonitor.asm -o datamonitor.obj
-; golink /entry start /mix /console datamonitor.obj user32.dll kernel32.dll shell32.dll gdi32.dll ws2_32.dll
+; golink /entry start /mix datamonitor.obj user32.dll kernel32.dll shell32.dll gdi32.dll ws2_32.dll
 ;
+;
+; TODO: - context menu to restart connection ?
+;       - service version ?
+;       - configuration file ?
 ;
 ; --------------------
 ; http://mrt-prodz.com
@@ -75,7 +79,6 @@ EXTERN recv
 ; OTHER IMPORT
 EXTERN GetModuleHandleA
 EXTERN SetTimer
-EXTERN GetLastError
 EXTERN ExitProcess
 
 SECTION .text
