@@ -1228,6 +1228,12 @@ logstr:
     push nid                                 ; lpdata
     push 1                                   ; dwMessage - NIM_MODIFY
     call [Shell_NotifyIconA]
+
+	; clean balloon tooltip
+    lea dword edx, [nid]
+    mov dword [edx+12], 23                   ; uFlags - NIF_ICON | NIF_MESSAGE | NIF_TIP | NIF_INFO
+    mov byte [edx+160], 0                    ; clear balloon message string
+    mov byte [edx+420], 0                    ; clear balloon title string
     
 .return:
     pop ebx
