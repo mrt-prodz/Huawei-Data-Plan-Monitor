@@ -20,6 +20,7 @@ This program works with a Huawei E5220 device using Software Version 21.143.11.0
 * Show current data plan usage (percentage)
 * Tooltip showing monthly current upload and download usage
 * Refresh percentage value every 5 minutes
+* Reconnect attempt after failing to retrieve value
 * Relatively small (around 6KB)
 
 This is a Windows project, Makefile and code have been created for NASM/GoLink.
