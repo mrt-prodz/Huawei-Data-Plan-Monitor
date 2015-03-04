@@ -41,6 +41,14 @@ This is a Windows project, Makefile and code have been created for NASM/GoLink.
 
 [Shell_NotifyIcon function](https://msdn.microsoft.com/en-us/library/windows/desktop/bb762159(v=vs.85).aspx)
 
+[Working With Big Numbers Using x86 Instructions](http://x86asm.net/articles/working-with-big-numbers-using-x86-instructions)
+
+[x86 Instruction Listings](http://en.wikipedia.org/wiki/X86_instruction_listings)
+
+[x86 Disassembly](http://en.wikibooks.org/wiki/X86_Disassembly)
+
+[Intel Pentium Instruction Set Reference (Basic Architecture Overview)](http://faydoc.tripod.com/cpu/)
+
 [NASM](http://www.nasm.us/)
 
 [GoLink](http://www.godevtool.com/)
