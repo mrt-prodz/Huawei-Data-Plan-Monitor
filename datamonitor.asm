@@ -534,10 +534,14 @@ show_context_menu:
 update_dataplan:
     ; get used dataplan percentage
     call get_dataplan_percentage
-    cmp eax, 0              ; if below zero we had an error
+    cmp eax, 0                               ; if below zero we had an error
     jge short .dataplan_ok
 .dataplan_error:
-;    push errDataplan
+    ; get dataplan failed, try re-connecting and get dataplan later
+    push sock
+    call [closesocket]                       ; close socket
+    call [WSACleanup]                        ; clean up WSA
+    call socket_setup                        ; setup socket again
     jmp short .error
 .dataplan_ok:
     ; update system tray icon with percentage in eax
@@ -554,7 +558,6 @@ update_dataplan:
     call [Shell_NotifyIconA]
     jmp short .return
 .error:
-;    call logerr
     xor eax, eax
 .return:
     retn
