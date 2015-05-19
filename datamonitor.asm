@@ -260,7 +260,10 @@ wnd_proc:
     jmp short .window_finish
         
     .IDT_UPDATE:
-        call update_dataplan
+        call socket_setup                    ; setup socket 
+        or eax, eax                          ; (again, server sends FIN, ACK after GET request)
+        jz short .window_finish
+        call update_dataplan                 ; update dataplan
         jmp short .window_finish
     
 .WM_DESTROY:
@@ -1229,7 +1232,7 @@ logstr:
     push 1                                   ; dwMessage - NIM_MODIFY
     call [Shell_NotifyIconA]
 
-	; clean balloon tooltip
+    ; clean balloon tooltip
     lea dword edx, [nid]
     mov dword [edx+12], 23                   ; uFlags - NIF_ICON | NIF_MESSAGE | NIF_TIP | NIF_INFO
     mov byte [edx+160], 0                    ; clear balloon message string
