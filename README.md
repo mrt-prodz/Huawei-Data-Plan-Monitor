@@ -1,6 +1,6 @@
-#Huawei Data Plan Monitor
+# Huawei Data Plan Monitor
  
-####System tray icon showing your current data plan usage with NASM/GoLink
+#### System tray icon showing your current data plan usage with NASM/GoLink
 
 Display a system tray icon and report available traffic from your dataplan by making API queries to your Huawei modem. Setup your data plan inside your Huawei web administration panel:
 
@@ -16,7 +16,7 @@ After quickly looking into the communication between my browser and the modem it
 
 This program works with a Huawei E5220 device using Software Version 21.143.11.00.784 and Web UI Version 13.100.02.00.784. If you are using another model, software and/or web ui version it would be great if you could report it.
 
-##Features:
+## Features:
 * Show current data plan usage (percentage)
 * Tooltip showing monthly current upload and download usage
 * Refresh percentage value every 5 minutes
@@ -25,18 +25,18 @@ This program works with a Huawei E5220 device using Software Version 21.143.11.0
 
 This is a Windows project, Makefile and code have been created for NASM/GoLink.
 
-##Screenshot:
+## Screenshot:
 ![Data Plan Monitor](https://raw.githubusercontent.com/mrt-prodz/Huawei-Data-Plan-Monitor/master/screenshot1.png)
 
 ![Data Plan Monitor](https://raw.githubusercontent.com/mrt-prodz/Huawei-Data-Plan-Monitor/master/screenshot2.png)
 
 ![Data Plan Monitor](https://raw.githubusercontent.com/mrt-prodz/Huawei-Data-Plan-Monitor/master/screenshot3.png)
 
-##Could be nice:
+## Could be nice:
 * Making another version as a Windows Service
 * Adding configuration file support to easily change the IP and Port of the modem
 
-##Reference:
+## Reference:
 [Winsock Reference](https://msdn.microsoft.com/en-us/library/windows/desktop/ms741416(v=vs.85).aspx)
 
 [Shell_NotifyIcon function](https://msdn.microsoft.com/en-us/library/windows/desktop/bb762159(v=vs.85).aspx)
